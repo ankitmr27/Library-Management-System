@@ -324,6 +324,7 @@ as
 select  book_loans_CardNo, count( book_loans_CardNo) as number from tbl_book_loans group by 1)
 go;
 
+// executing the procedure
 Exec getCountTable;
 
 select borrower_BorrowerName, borrower_BorrowerAddress, number from (cnt INNER JOIN tbl_borrower) where number > 5;
